@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thampatron.github.io/website/sitemap.xml
