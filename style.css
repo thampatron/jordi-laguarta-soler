@@ -149,6 +149,7 @@ footer a{color:var(--ink); display:inline-block; padding-block:5px}
 .prose-col{max-width:var(--prose)}
 .eyebrow{margin-top:28px; font-size:14px; color:var(--grey)}
 .page h1{margin-top:8px; font-size:36px; font-weight:600; letter-spacing:-0.025em; line-height:1.2}
+@media (max-width:640px){ .page h1{font-size:28px; line-height:1.15; letter-spacing:-0.02em} }
 .lede{margin-top:16px; font-size:18px; line-height:1.6}
 .authors{margin-top:14px; font-size:14.5px; color:var(--grey)}
 .authors b{color:var(--ink); font-weight:600}
@@ -199,7 +200,7 @@ svg .links{stroke:var(--link)}
 .raxis{display:grid; grid-template-columns:92px minmax(0,1fr) 40px; gap:12px; font-size:12px; color:var(--grey)}
 .raxis div{display:flex; justify-content:space-between}
 .figs3{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; margin-top:14px}
-.figs3 .frame{padding:18px}
+.figs3 .frame{padding:18px; background:var(--surface); border:1px solid var(--rule); border-radius:12px}
 .figs3 b.big{font-size:30px; font-weight:600; letter-spacing:-0.02em}
 @media (max-width:860px){ .figs3{grid-template-columns:1fr} }
 .figs3 svg{width:100%; height:auto; overflow:visible}
@@ -357,11 +358,13 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* project hero figures: use the frame */
 .page > .wrap > .figwide .frame > svg.vz{max-width:480px}
 .figsplit .frame{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:24px 64px; align-items:center; padding:36px 40px}
-.figsplit .vz{max-width:none}
-.fs-wave{display:block; width:100%; height:auto; margin-bottom:8px}
-.fs-k{font-size:13px; color:var(--grey); text-align:center}
-.figsplit .frame{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-@media (max-width:860px){ .figsplit .frame{grid-template-columns:1fr; padding:20px} .fs-k{margin-bottom:16px} }
+.figsplit .vz{max-width:440px}
+.figsplit{max-width:520px}
+.figsplit .frame{grid-template-columns:minmax(0,1fr); gap:20px; padding:28px 32px}
+.fs-side{display:flex; align-items:center; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--rule)}
+.fs-wave{display:block; width:150px; flex:none; height:auto; margin:0}
+.fs-k{font-size:13px; color:var(--grey); text-align:left; margin:0}
+@media (max-width:860px){ .figsplit .frame{padding:20px} }
 @media (max-width:760px){ .hero-text{display:contents} .hero .wrap{gap:0} .hero .headshot,.hero h1,.hero .role{order:0} .hero .herofig{order:1; margin-top:20px} .hero .summary,.hero .hero-links,.hero .seeking{order:2} }
 /* warmer palette (light mode only; dark rules have higher specificity) */
 :root{--bg:#F4F2EC; --surface:#FFFFFF; --rule:#E2DED4; --noncrop:#E3E0D7; --grey:#5F6168}
