@@ -133,7 +133,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .pubs .a b{color:var(--ink); font-weight:500}
 .pubs .l{display:flex; flex-wrap:wrap; gap:4px 14px; font-size:14px; margin-top:2px}
 .press{margin-top:18px; font-size:14px; color:var(--grey); display:flex; flex-wrap:wrap; gap:4px 16px}
-.press a{color:var(--ink)}
+.press a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px}
 
 footer{margin-top:96px; border-top:1px solid var(--rule)}
 footer .wrap{padding-block:28px 48px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:14px; color:var(--grey)}
