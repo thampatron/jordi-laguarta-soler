@@ -374,8 +374,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 @media (max-width:860px){ .figsplit .frame{padding:20px} }
 @media (max-width:760px){ .hero-text{display:contents} .hero .wrap{gap:0} .hero .headshot,.hero h1,.hero .role{order:0} .hero .herofig{order:1; margin-top:20px} .hero .summary,.hero .hero-links,.hero .seeking{order:2} }
 /* warmer palette (light mode only; dark rules have higher specificity) */
-:root{--bg:#F4F2EC; --surface:#FFFFFF; --rule:#E2DED4; --noncrop:#E3E0D7; --grey:#5F6168}
-.hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.13), transparent 60%)}
+:root{--bg:#FCFBF9; --surface:#FFFFFF; --rule:#ECE9E4; --noncrop:#E7E4DF; --grey:#5F6168}
+.hero{background:none}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.05), transparent 60%)} }
 :root[data-theme="dark"] .hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.05), transparent 60%)}
 .eo-schem{display:flex!important; flex-wrap:wrap; justify-content:center; gap:24px 64px}
