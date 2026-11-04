@@ -361,6 +361,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .figsplit .vz{max-width:400px}
 .figsplit{max-width:720px}
 .tf-hero{max-width:720px}
+.eo-fig{max-width:var(--prose)}
 @media (min-width:641px){ .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
 .figsplit .frame{grid-template-columns:minmax(0,1fr); gap:20px; padding:28px 32px}
 .fs-side{display:flex; align-items:center; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--rule)}
