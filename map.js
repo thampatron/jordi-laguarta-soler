@@ -63,4 +63,4 @@
   b.addEventListener('click',function(){ var o=n.classList.toggle('open'); b.setAttribute('aria-expanded',String(o)); });
   Array.prototype.forEach.call(n.querySelectorAll('.links a'),function(a){ a.addEventListener('click',close); });
   document.addEventListener('click',function(e){ if(n.classList.contains('open')&&!n.contains(e.target)) close(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&n.classList.contains('open')){ close(); b.focus(); } }); })();
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&n.classList.contains('open')){ close(); b.focus(); } }); n.addEventListener('focusout',function(e){ if(n.classList.contains('open')&&!n.contains(e.relatedTarget)) close(); }); })();
