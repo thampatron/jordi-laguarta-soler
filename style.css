@@ -101,6 +101,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .work a.row:hover h3{color:var(--link)}
 .thumb{width:240px; height:160px; border-radius:10px; overflow:hidden; background:var(--surface); border:1px solid var(--rule); display:grid; place-items:center}
 .thumb .t-map{width:100%; height:100%; background-image:url(assets/india-map.png); background-size:240% auto; background-position:46% 34%; background-repeat:no-repeat; image-rendering:pixelated}
+.thumb .t-map canvas{display:block; width:100%; height:100%; image-rendering:pixelated}
 .thumb .t-num{display:grid; gap:2px; text-align:center}
 .thumb .t-num b{font-size:34px; font-weight:600; letter-spacing:-0.02em}
 .thumb .t-num span{font-size:13px; color:var(--grey)}
@@ -249,6 +250,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .vz .vz-h{fill:var(--ink); font-weight:600}
 .vz .vz-b{font-weight:600}
 .vz .vz-q{font-size:15px; font-weight:600}
+@media (max-width:640px){ .vz .lab{font-size:14px} .figwide svg:not(.vz) text{font-size:13.5px} }
 .vz-dot{fill:var(--ink); stroke:var(--surface); stroke-width:2}
 .vz-ring{fill:var(--surface); stroke:var(--ink); stroke-width:2}
 .vz-err{stroke:var(--ink); stroke-width:2}
@@ -297,7 +299,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .work a.row:hover .thumb{border-color:var(--grey)}
 .thumb img.t-img{width:100%; height:100%; object-fit:cover; transform:scale(1.5); transform-origin:62% 45%}
 .section-head a{color:var(--ink)}
-@media (max-width:860px){ .hero .wrap{grid-template-columns:1fr; min-height:0; gap:28px} .work a.row{grid-template-columns:160px minmax(0,1fr); gap:20px} .thumb{width:160px; height:100px} }
+@media (max-width:860px){ .hero .wrap{grid-template-columns:1fr; min-height:0; gap:28px} .work a.row{grid-template-columns:clamp(160px,30vw,240px) minmax(0,1fr); gap:24px} .thumb{width:100%; height:auto; aspect-ratio:16/10} }
 @media (max-width:760px){ .hero h1{font-size:36px} .summary{font-size:17px} .hero .headshot{width:72px;height:72px} }
 @media (max-width:640px){ .work a.row{grid-template-columns:1fr} .thumb{width:100%; height:auto; aspect-ratio:16/10} }
 .hero .wrap{grid-template-columns:minmax(0,11fr) minmax(0,9fr); gap:48px}
@@ -361,7 +363,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .page > .wrap > .figwide .frame > svg.vz{max-width:480px}
 .figsplit .frame{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:24px 64px; align-items:center; padding:36px 40px}
 .figsplit .vz{max-width:400px}
-.figsplit{max-width:720px}
+.figsplit, .figwide:not(.tf-hero):not(.eo-fig):has(> .frame > svg.vz){max-width:560px}
 .tf-hero{max-width:720px}
 .eo-fig{max-width:var(--prose)}
 @media (min-width:641px){ .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }

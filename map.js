@@ -39,8 +39,11 @@
         li.appendChild(b); rl.appendChild(li); its.push({el:b,cls:r[2]}); });
       bindButtons(rl,m,its); }
   });
-  if(!maps.length) return;
-  var src=maps[0].cv.getAttribute('data-src');
+  var th=document.querySelectorAll('.thumb .t-map');
+  if(!maps.length&&!th.length) return;
+  var src=maps.length?maps[0].cv.getAttribute('data-src'):'assets/india-map.png';
+  function thumbs(){ if(!th.length) return; var c=document.createElement('canvas'); c.width=W; c.height=H; new M(c).draw(-1);
+    Array.prototype.forEach.call(th,function(e){ var t=e.querySelector('canvas'); if(!t){ t=document.createElement('canvas'); t.width=667; t.height=417; e.appendChild(t); e.style.backgroundImage='none'; } t.getContext('2d').clearRect(0,0,667,417); t.getContext('2d').drawImage(c,429,329,667,417,0,0,667,417); }); }
   var img=new Image();
   img.onload=function(){
     var t=document.createElement('canvas'); t.width=W; t.height=H; var x=t.getContext('2d'); x.drawImage(img,0,0,W,H);
@@ -50,10 +53,10 @@
       var r=d[j],g=d[j+1],b=d[j+2],k=23;
       for(var q=0;q<CL.length;q++){var c=CL[q][2]; if(r===c[0]&&g===c[1]&&b===c[2]){k=q;break;}}
       if(k===23&&r===235&&g===235&&b===235) k=20; cls[p]=k;}
-    palette(); maps.forEach(function(m){m.draw();});
+    palette(); maps.forEach(function(m){m.draw();}); thumbs();
   };
   img.src=src;
-  function re(){ if(cls){ palette(); maps.forEach(function(m){m.draw();}); } }
+  function re(){ if(cls){ palette(); maps.forEach(function(m){m.draw();}); thumbs(); } }
   var mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)'); if(mq&&mq.addEventListener) mq.addEventListener('change',re);
   new MutationObserver(re).observe(root,{attributes:true,attributeFilter:['data-theme']});
 })();
