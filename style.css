@@ -264,7 +264,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .thumb img.t-img{width:100%; height:100%; object-fit:cover; display:block}
 /* Thailand hero: tall national map beside the per-class F1 chart */
 .thzone{display:grid; grid-template-columns:auto minmax(0,1fr); gap:40px; align-items:center}
-.thzone img{display:block; height:auto; width:auto; max-width:100%; max-height:560px; justify-self:center}
+.thzone img{display:block; height:auto; width:auto; max-width:100%; max-height:560px; justify-self:center; aspect-ratio:788/1362}
 .figwide .figtitle{font-weight:600; font-size:15px}
 .figwide .figsub{font-size:14px; color:var(--grey); margin:4px 0 14px}
 @media (max-width:860px){ .thzone{grid-template-columns:1fr; gap:24px} .thzone img{max-height:460px} }
