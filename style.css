@@ -393,10 +393,10 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .affil-list{align-items:center; gap:14px 44px}
 .affil-list li img{display:block; height:28px; width:auto; filter:grayscale(1) brightness(0); opacity:.62; transition:opacity .15s}
 .affil-list li img:hover{opacity:.9}
-.affil-list .lg-mit img{height:27px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
+.affil-list .lg-mit img{height:44px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
-@media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:19px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
+@media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:34px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
 /* timeline */
 .tl{display:grid; gap:6px; padding:20px 0 8px}
 .tl-hint{font-size:13px; color:var(--grey)}
