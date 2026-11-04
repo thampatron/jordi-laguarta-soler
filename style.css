@@ -422,6 +422,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-lab b{font-size:13.5px; font-weight:500; line-height:1.3; color:var(--ink); text-wrap:balance}
 .tl-lab:focus-visible{outline:2px solid var(--link); outline-offset:4px; border-radius:6px}
 .tl-lab:hover,.tl-lab:hover b{text-decoration:none}
+.tl-sub{font-size:12px; line-height:1.35; color:var(--grey); margin-top:3px; text-wrap:balance}
 .tl-bar:hover .tl-dot,.tl-bar.open .tl-dot,.tl-bar:has(:focus-visible) .tl-dot{background:var(--ink)}
 .tl-bar:hover,.tl-bar.open,.tl-bar:has(:focus-visible){z-index:5}
 .tl-hint{font-size:13px; color:var(--grey)}
