@@ -279,7 +279,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .hero .role{font-size:15.5px}
 .summary{font-size:18.5px; line-height:1.6; max-width:36em; margin-top:22px}
 .hero-links{margin-top:22px; font-size:15.5px; gap:6px 22px}
-.hero-links a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:4px}
+.hero-links a{color:var(--ink); text-decoration:underline; text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent); text-underline-offset:4px}
 .hero-links a:hover{text-decoration-color:var(--ink)}
 .seeking{margin-top:14px; font-size:14px}
 .mapfig.herofig{display:block; border:0; padding:0; margin:0}
@@ -339,7 +339,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .st-stage{display:block; font-size:12px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--grey); margin-bottom:10px}
 .st-col ul{list-style:none; margin:0; padding:0; display:grid; gap:4px; font-size:15px; line-height:1.4}
 @media (max-width:760px){ .st-strip{grid-template-columns:1fr 1fr} .st-col:nth-child(3){border-left:0} .st-col:nth-child(n+3){border-top:1px solid var(--rule)} .st-col::after{display:none} .st-col{padding:16px 14px} .st-col ul{font-size:14px} }
-.summary a{color:inherit; text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px}
+.summary a{color:inherit; text-decoration:underline; text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent); text-underline-offset:3px}
 
 /* r16 design */
 /* Thailand: country silhouette in the non-crop token under the crop layer */
@@ -440,6 +440,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .seeking{text-wrap:pretty; color:color-mix(in srgb, var(--ink) 72%, var(--bg))}
 @media (max-width:760px){
   .hero .role + .summary{order:0; margin-top:18px}
+  .hero .hero-links{order:0; margin-top:14px}
   .hero .wrap{grid-template-columns:76px minmax(0,1fr); column-gap:16px}
   .hero .headshot{grid-row:span 2; align-self:center; width:76px; height:76px; margin:0}
   .hero h1{font-size:30px; line-height:1.1; align-self:end}
