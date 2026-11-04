@@ -8,13 +8,13 @@
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
   --bg:#0E1013; --surface:#171A1F; --ink:#F2F4F7; --grey:#949BA5; --rule:#262A31; --link:#8AB4FF;
-  --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#2F72C4; --pulse:#C0392B; color-scheme:dark }}
+  --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#3B7FD0; --pulse:#E62E2E; --trees:#238C35; color-scheme:dark }}
 :root[data-theme="dark"]{ --bg:#0E1013; --surface:#171A1F; --ink:#F2F4F7; --grey:#949BA5; --rule:#262A31; --link:#8AB4FF;
-  --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#2F72C4; --pulse:#C0392B; color-scheme:dark }
+  --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#3B7FD0; --pulse:#E62E2E; --trees:#238C35; color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{transition-duration:0s !important; transition-delay:0s !important; animation-duration:0s !important} }
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--f); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; font-feature-settings:"cv11","ss01"}
 a{color:var(--link); text-decoration:none}
@@ -373,6 +373,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .fs-wave{display:block; width:150px; flex:none; height:auto; margin:0}
 .fs-k{font-size:13px; color:var(--grey); text-align:left; margin:0}
 @media (max-width:860px){ .figsplit .frame{padding:20px} }
+@media (max-width:640px){ .figsplit .frame{padding:14px 10px} }
 @media (max-width:760px){ .hero-text{display:contents} .hero .wrap{gap:0} .hero .headshot,.hero h1,.hero .role{order:0} .hero .herofig{order:1; margin-top:20px} .hero .summary,.hero .hero-links,.hero .seeking{order:2} }
 /* warmer palette (light mode only; dark rules have higher specificity) */
 :root{--bg:#FCFBF9; --surface:#FFFFFF; --rule:#ECE9E4; --noncrop:#E7E4DF; --grey:#5F6168}
@@ -398,6 +399,11 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
 @media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:34px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
+/* mobile/dark round (Nov 4): clean role break, no hanging separator */
+.role-sep{white-space:pre} .role-b{white-space:nowrap}
+@media (max-width:760px), (min-width:861px) and (max-width:940px){ .role-sep{display:none} .role-b{display:block} }
+/* phone tap targets: taller hit areas, same visual rhythm */
+@media (max-width:760px){ .hero .hero-links{margin-top:10px; row-gap:0} .hero-links a{display:inline-block; padding-block:10px} .press{row-gap:0} .press a{padding-block:10px} }
 /* timeline */
 .tl{display:grid; gap:6px; padding:20px 0 8px}
 .tl-hint{font-size:13px; color:var(--grey)}
