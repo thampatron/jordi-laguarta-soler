@@ -246,6 +246,8 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .section{padding-block:56px 0}
 /* ---- r11 VIZ additions (append to style.css) ---- */
 :root{ --cassava:#E8772E; --th-other:#6B7078 }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --band-op:.6 } }
+:root[data-theme="dark"]{ --band-op:.6 }
 .vz{display:block; width:100%; max-width:400px; height:auto; overflow:visible}
 .vz text{font-size:13px}
 .vz .vz-h{fill:var(--ink); font-weight:600}
@@ -351,6 +353,10 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .t-th img.t-img{position:relative; transform:none; filter:none}
 .th-map{justify-self:center; line-height:0}
 .th-map img{position:relative}
+.th-col{justify-self:center; display:flex; flex-direction:column; align-items:center}
+.th-key{list-style:none; margin:14px 0 0; padding:0; max-width:320px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px}
+.th-key li{display:flex; align-items:center; gap:6px; font-size:12.5px; line-height:18px; color:var(--grey); white-space:nowrap}
+.th-key i{width:11px; height:11px; border-radius:2px; background:var(--c); flex:none}
 /* pipeline strip: segmented rule, numbered stages, no boxes or arrows */
 .st-strip{border:0; gap:28px}
 .st-col{padding:14px 0 0; border-top:2px solid var(--ink)}
@@ -395,6 +401,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .affil-list{align-items:center; gap:14px 44px}
 .affil-list li img{display:block; height:28px; width:auto; filter:grayscale(1) brightness(0); opacity:.62; transition:opacity .15s}
 .affil-list li img:hover{opacity:.9}
+@media (min-width:761px) and (max-width:999px){ .affil-list{gap:14px 20px; justify-content:space-between} .affil-list li.affil-k{flex-basis:100%; margin-right:0} }
 .affil-list .lg-mit img{height:44px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
