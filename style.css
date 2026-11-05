@@ -84,7 +84,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .legend button{all:unset; box-sizing:border-box; cursor:pointer; display:flex; gap:8px; align-items:center; font-size:13.5px; color:var(--grey); width:100%}
 .legend button:hover, .legend button[aria-pressed="true"]{color:var(--ink)}
 .legend button:focus-visible{outline:2px solid var(--link); outline-offset:2px}
-.legend i{width:11px; height:11px; border-radius:2px; background:var(--c); flex:none}
+.legend i{width:11px; height:11px; border-radius:2px; background:var(--c); box-shadow:inset 0 0 0 1px var(--sw-edge); flex:none}
 .mapside .cap{font-size:14px; color:var(--grey)}
 @media (max-width:760px){
   .mapfig{grid-template-columns:1fr; gap:16px}
@@ -197,11 +197,11 @@ svg .links{stroke:var(--link)}
 .rlist button{all:unset; box-sizing:border-box; cursor:pointer; width:100%; display:grid; grid-template-columns:92px minmax(0,1fr) 40px; align-items:center; gap:12px; padding:7px 0; font-size:14.5px}
 .rlist .track{position:relative; height:12px}
 .rlist .track::before{content:""; position:absolute; left:0; right:0; top:5px; height:2px; background:color-mix(in srgb, var(--grey) 35%, var(--rule))}
-.rlist .dot{position:absolute; top:0; width:12px; height:12px; border-radius:50%; background:var(--c); transform:translateX(-6px); box-shadow:0 0 0 2px var(--surface)}
+.rlist .dot{position:absolute; top:0; width:12px; height:12px; border-radius:50%; background:var(--c); transform:translateX(-6px); box-shadow:inset 0 0 0 1px var(--sw-edge), 0 0 0 2px var(--surface)}
 .rlist .val{color:var(--grey); text-align:right; font-variant-numeric:tabular-nums}
 .rlist button:hover .nm, .rlist button[aria-pressed="true"] .nm{text-decoration:underline; text-underline-offset:3px}
 .raxis{display:grid; grid-template-columns:92px minmax(0,1fr) 40px; gap:12px; font-size:12px; color:var(--grey)}
-.raxis div{display:flex; justify-content:space-between}
+.raxis div{display:flex; justify-content:space-between; margin-inline:-9px}
 .figs3{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; margin-top:14px}
 .figs3 .frame{padding:18px; background:var(--surface); border:1px solid var(--rule); border-radius:12px}
 .figs3 b.big{font-size:30px; font-weight:600; letter-spacing:-0.02em}
@@ -216,6 +216,8 @@ table.mini td:last-child{text-align:right; font-weight:600}
 @media (max-width:860px){ table.mini{font-size:10.5px; width:88%} table.mini td{padding:1px 0} }
 .prose-col .figs3{grid-template-columns:1fr; gap:16px}
 .prose-col .figs3 svg{max-width:420px}
+.figs3 > .frame.figwide{display:block}
+.figs3 > .frame.figwide .figsub{margin-top:4px}
 /* round 8 */
 .mapfig{grid-template-columns:auto 200px; justify-content:center; column-gap:40px}
 .mapfig a.maplink{justify-self:end}
@@ -249,12 +251,15 @@ table.mini td:last-child{text-align:right; font-weight:600}
 :root{ --cassava:#E8772E; --th-other:#6B7078 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --band-op:.6 } }
 :root[data-theme="dark"]{ --band-op:.6 }
+:root{ --sw-edge:rgba(17,17,17,.4) }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --sw-edge:transparent } }
+:root[data-theme="dark"]{ --sw-edge:transparent }
 .vz{display:block; width:100%; max-width:400px; height:auto; overflow:visible}
 .vz text{font-size:13px}
 .vz .vz-h{fill:var(--ink); font-weight:600}
 .vz .vz-b{font-weight:600}
 .vz .vz-q{font-size:15px; font-weight:600}
-@media (max-width:640px){ .vz .lab{font-size:14px} .figwide svg:not(.vz) text{font-size:13.5px} }
+@media (max-width:640px){ .vz .lab{font-size:14px} .figwide svg:not(.vz) text{font-size:13.5px} .figsplit .vz text:not(.lab){font-size:14px} }
 .vz-dot{fill:var(--ink); stroke:var(--surface); stroke-width:2}
 .vz-ring{fill:var(--surface); stroke:var(--ink); stroke-width:2}
 .vz-err{stroke:var(--ink); stroke-width:2}
@@ -263,7 +268,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .vz-track{fill:var(--rule)}
 .vz-bar{fill:var(--ink)}
 .vz-bar2{fill:var(--grey)}
-.vz-sw{stroke:var(--rule); stroke-width:1}
+.vz-sw{stroke:var(--sw-edge); stroke-width:1}
 .vz-mask{fill:color-mix(in srgb, var(--link) 12%, transparent); stroke:var(--link); stroke-width:1.5; stroke-dasharray:3 2}
 .vz-arrow{stroke:var(--link); stroke-width:1.5}
 .vz-thumb{width:100%; height:100%; display:block}
@@ -349,16 +354,16 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* r16 design */
 /* Thailand: country silhouette in the non-crop token under the crop layer */
 .t-th,.th-map{position:relative; display:block}
-.t-th{width:100%; height:100%; transform:scale(1.5); transform-origin:62% 45%}
+.t-th{width:100%; height:100%; transform:scale(1.5); transform-origin:30% 72%}
 .t-th::before,.th-map::before{content:""; position:absolute; inset:0; background:var(--noncrop); -webkit-mask:url(assets/thailand-thumb-mask.png) center/100% 100% no-repeat; mask:url(assets/thailand-thumb-mask.png) center/100% 100% no-repeat}
 .th-map::before{-webkit-mask-image:url(assets/thailand-mask.png); mask-image:url(assets/thailand-mask.png)}
 .t-th img.t-img{position:relative; transform:none; filter:none}
 .th-map{justify-self:center; line-height:0}
 .th-map img{position:relative}
 .th-col{justify-self:center; display:flex; flex-direction:column; align-items:center}
-.th-key{list-style:none; margin:14px 0 0; padding:0; max-width:320px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px}
+.th-key{list-style:none; margin:14px 0 0; padding:0; max-width:250px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px}
 .th-key li{display:flex; align-items:center; gap:6px; font-size:12.5px; line-height:18px; color:var(--grey); white-space:nowrap}
-.th-key i{width:11px; height:11px; border-radius:2px; background:var(--c); flex:none}
+.th-key i{width:11px; height:11px; border-radius:2px; background:var(--c); box-shadow:inset 0 0 0 1px var(--sw-edge); flex:none}
 /* pipeline strip: segmented rule, numbered stages, no boxes or arrows */
 .st-strip{border:0; gap:28px}
 .st-col{padding:14px 0 0; border-top:2px solid var(--ink)}
