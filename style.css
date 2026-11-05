@@ -409,6 +409,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .affil-list li img{display:block; height:28px; width:auto; filter:grayscale(1) brightness(0); opacity:.62; transition:opacity .15s}
 .affil-list li img:hover{opacity:.9}
 @media (min-width:761px) and (max-width:999px){ .affil-list{gap:14px 20px; justify-content:space-between} .affil-list li.affil-k{flex-basis:100%; margin-right:0} }
+@media (min-width:1000px){ .affil-list{justify-content:space-between; gap:14px 24px} .affil-list li.affil-k{margin-right:0} }
 .affil-list .lg-mit img{height:44px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
