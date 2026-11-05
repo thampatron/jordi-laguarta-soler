@@ -318,7 +318,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 @media (max-width:760px){ .hero h1{font-size:34px; white-space:normal} }
 @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr; min-height:0; gap:28px} .herofig canvas{max-height:none} }
 .thumb img.t-img{filter:saturate(1.5) contrast(1.15)}
-.hero{padding-block:40px 8px}
+.hero{padding-block:40px 20px}
 .hero .wrap{min-height:0}
 .section#work{padding-top:56px}
 /* end-to-end stack band */
@@ -341,7 +341,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .st-head span:nth-child(2)::after,.st-head span:nth-child(3)::after,.st-head span:nth-child(4)::after{content:"→"; position:absolute; right:4px; color:var(--grey); font-weight:400}
 @media (max-width:860px){ .st-cell{padding:7px 10px; font-size:13.5px} .st-cell::before{flex:0 0 104px; min-width:0; font-size:10.5px} .st-row{gap:5px; padding-block:14px} }
 /* stack strip v2 */
-.stackband{padding-block:40px 0}
+.stackband{padding-block:28px 0}
 .st-strip{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
 .st-col{padding:20px 20px 22px; position:relative}
 .st-col + .st-col{border-left:1px solid var(--rule)}
