@@ -14,6 +14,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media print{ :root:not(#_),:root[data-theme="dark"]{--bg:#fff; --surface:#fff; --ink:#111; --grey:#555; --rule:#ddd; --link:#111; color-scheme:light} .nav,.skip,#timeline,.tl-hint{display:none !important} .affil-list li img{filter:grayscale(1) brightness(0) !important; opacity:.62 !important} figure,.thumb,canvas,img{break-inside:avoid} h2,h3{break-after:avoid} }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{transition-duration:0s !important; transition-delay:0s !important; animation-duration:0s !important} }
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--f); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; font-feature-settings:"cv11","ss01"}
@@ -282,6 +283,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .hero .role{font-size:15.5px}
 .summary{font-size:18.5px; line-height:1.6; max-width:36em; margin-top:22px}
 .hero-links{margin-top:22px; font-size:15.5px; gap:6px 22px}
+@media (max-width:359px){ .hero .hero-links{column-gap:12px} }
 .hero-links a{color:var(--ink); text-decoration:underline; text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent); text-underline-offset:4px}
 .hero-links a:hover{text-decoration-color:var(--ink)}
 .seeking{margin-top:14px; font-size:14px}
@@ -405,12 +407,12 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .affil-list .lg-mit img{height:44px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
-@media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:34px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
+@media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:40px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
 /* mobile/dark round (Nov 4): clean role break, no hanging separator */
 .role-sep{white-space:pre} .role-b{white-space:nowrap}
 @media (max-width:760px), (min-width:861px) and (max-width:940px){ .role-sep{display:none} .role-b{display:block} }
 /* phone tap targets: taller hit areas, same visual rhythm */
-@media (max-width:760px){ .hero .hero-links{margin-top:10px; row-gap:0} .hero-links a{display:inline-block; padding-block:10px} .press{row-gap:0} .press a{padding-block:10px} }
+@media (max-width:760px){ .hero .hero-links{margin-top:10px; row-gap:0} .hero-links a{display:inline-block; padding-block:10px} .press{row-gap:0; align-items:baseline} .press a{padding-block:10px} }
 /* timeline */
 .tl{list-style:none; margin:0 0 40px; padding:20px 0 0; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); position:relative}
 .tl::before{content:""; position:absolute; left:0; right:0; top:46px; height:1px; background:var(--rule)}
@@ -437,6 +439,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-pop .tl-more{margin-top:6px; font-size:12.5px; font-weight:500; color:var(--link)}
 .tl-bar:hover .tl-pop,.tl-bar.open .tl-pop,.tl-bar:has(:focus-visible) .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s}
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
+:root[data-theme="dark"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)}
 @media (max-width:900px){ #timeline,.tl-hint{display:none} }
 @media (min-width:901px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
 /* first-screen round (Nov 3): laptop fold, phone bio-first, headshot beside name */
