@@ -412,8 +412,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* phone tap targets: taller hit areas, same visual rhythm */
 @media (max-width:760px){ .hero .hero-links{margin-top:10px; row-gap:0} .hero-links a{display:inline-block; padding-block:10px} .press{row-gap:0} .press a{padding-block:10px} }
 /* timeline */
-.tl{list-style:none; margin:0; padding:28px 0 8px; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); position:relative}
-.tl::before{content:""; position:absolute; left:0; right:0; top:54px; height:1px; background:var(--rule)}
+.tl{list-style:none; margin:0 0 40px; padding:20px 0 0; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); position:relative}
+.tl::before{content:""; position:absolute; left:0; right:0; top:46px; height:1px; background:var(--rule)}
 .tl-bar{position:relative; display:flex; justify-content:center}
 .tl-lab{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0; text-align:center; padding:0 6px; text-decoration:none; font:inherit; max-width:100%}
 .tl-yr{font-size:12px; color:var(--grey); font-variant-numeric:tabular-nums; line-height:18px}
@@ -437,7 +437,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-pop .tl-more{margin-top:6px; font-size:12.5px; font-weight:500; color:var(--link)}
 .tl-bar:hover .tl-pop,.tl-bar.open .tl-pop,.tl-bar:has(:focus-visible) .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s}
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
-@media (max-width:900px){ #timeline{display:none} }
+@media (max-width:900px){ #timeline,.tl-hint{display:none} }
 @media (min-width:901px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
 /* first-screen round (Nov 3): laptop fold, phone bio-first, headshot beside name */
 @media (min-width:861px) and (max-height:820px){ .hero{padding-block:24px 8px} .hero .headshot{width:80px;height:80px;margin-bottom:14px} .hero h1{font-size:44px} .summary{font-size:17.5px; line-height:1.55; margin-top:16px} .summary + .summary{margin-top:10px} .hero-links{margin-top:16px} .seeking{margin-top:8px} }
