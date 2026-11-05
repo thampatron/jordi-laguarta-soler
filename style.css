@@ -461,6 +461,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
   .hero .role{margin-top:4px; font-size:14.5px; align-self:start}
   .hero .herofig,.hero .summary,.hero .hero-links,.hero .seeking{grid-column:1/-1}
 }
+@media (max-width:359px){ .hero h1{font-size:26px} }
 /* first-screen round (Nov 4): headshot beside the name on wide screens (DESIGN + AUDIENCE); affiliations clear of the laptop fold */
 @media (min-width:861px){
   .hero-text{display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:18px; align-content:start}
