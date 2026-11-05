@@ -94,7 +94,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 /* home sections */
 .section{padding-block:72px 0}
 .section > .wrap > h2{font-size:24px; font-weight:600; letter-spacing:-0.015em; margin-bottom:24px}
-.section-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:24px}
+.section-head{display:flex; flex-wrap:wrap; row-gap:4px; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:24px}
 .section-head h2{font-size:24px; font-weight:600; letter-spacing:-0.015em}
 .work{list-style:none; margin:0; padding:0; display:grid; gap:0; border-top:1px solid var(--rule)}
 .work li{border-bottom:1px solid var(--rule)}
@@ -144,6 +144,9 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 footer{margin-top:96px; border-top:1px solid var(--rule)}
 footer .wrap{padding-block:28px 48px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; font-size:14px; color:var(--grey)}
 footer a{color:var(--ink); display:inline-block; padding-block:5px}
+.ft-sep,.ft-sep2{white-space:pre} .ft-links{white-space:nowrap}
+@media (max-width:640px){ footer .ft-sep{display:none} footer .ft-name{display:block} }
+@media (max-width:379px){ footer .ft-sep2{display:none} footer .ft-links{display:block} }
 
 /* project pages */
 .page{padding-block:40px 0}
@@ -240,6 +243,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 @media (max-width:860px){ .work .k{display:flex; gap:6px; align-items:baseline; text-align:left; grid-column:2} .work .k b{font-size:17px} }
 @media (max-width:640px){ .work .k{grid-column:auto} .thumb:has(table.mini){display:none} }
 .legend button{padding:2px 0}
+@media (max-width:359px){ .legend button{gap:5px; font-size:12px; min-height:24px} }
 .only-narrow{display:none}
 @media (max-width:640px){ .only-wide{display:none} .only-narrow{display:block} .figwide .frame{padding:14px} }
 .publine{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
@@ -308,7 +312,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .work a.row:hover h3{color:var(--ink); text-decoration:underline; text-underline-offset:4px}
 .work a.row:hover .thumb{border-color:var(--grey)}
 .thumb img.t-img{width:100%; height:100%; object-fit:cover; transform:scale(1.5); transform-origin:62% 45%}
-.section-head a{color:var(--ink)}
+.section-head a{color:var(--ink); white-space:nowrap}
 @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr; min-height:0; gap:28px} .work a.row{grid-template-columns:clamp(160px,30vw,240px) minmax(0,1fr); gap:24px} .thumb{width:100%; height:auto; aspect-ratio:16/10} }
 @media (max-width:760px){ .hero h1{font-size:36px} .summary{font-size:17px} .hero .headshot{width:72px;height:72px} }
 @media (max-width:640px){ .work a.row{grid-template-columns:1fr} .thumb{width:100%; height:auto; aspect-ratio:16/10} }
@@ -461,7 +465,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
   .hero .role{margin-top:4px; font-size:14.5px; align-self:start}
   .hero .herofig,.hero .summary,.hero .hero-links,.hero .seeking{grid-column:1/-1}
 }
-@media (max-width:359px){ .hero h1{font-size:26px} }
+@media (max-width:359px){ .hero h1{font-size:26px} footer .wrap{font-size:13.5px} }
 /* first-screen round (Nov 4): headshot beside the name on wide screens (DESIGN + AUDIENCE); affiliations clear of the laptop fold */
 @media (min-width:861px){
   .hero-text{display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:18px; align-content:start}
