@@ -142,7 +142,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .press a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px}
 
 footer{margin-top:96px; border-top:1px solid var(--rule)}
-footer .wrap{padding-block:28px 48px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:14px; color:var(--grey)}
+footer .wrap{padding-block:28px 48px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; font-size:14px; color:var(--grey)}
 footer a{color:var(--ink); display:inline-block; padding-block:5px}
 
 /* project pages */
