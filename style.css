@@ -376,7 +376,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* project hero figures: use the frame */
 .page > .wrap > .figwide .frame > svg.vz{max-width:480px}
 .figsplit .frame{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:24px 64px; align-items:center; padding:36px 40px}
-.figsplit .vz{max-width:400px}
+.figsplit .vz{max-width:400px; margin-left:-14px}
 .figsplit, .figwide:not(.tf-hero):not(.eo-fig):has(> .frame > svg.vz){max-width:560px}
 .tf-hero{max-width:720px}
 .eo-fig{max-width:var(--prose)}
@@ -386,7 +386,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .fs-wave{display:block; width:150px; flex:none; height:auto; margin:0}
 .fs-k{font-size:13px; color:var(--grey); text-align:left; margin:0}
 @media (max-width:860px){ .figsplit .frame{padding:20px} }
-@media (max-width:640px){ .figsplit .frame{padding:14px 10px} }
+@media (max-width:640px){ .figsplit .frame{padding:14px 10px} .figsplit .vz{margin-left:-12px} }
 @media (max-width:760px){ .hero-text{display:contents} .hero .wrap{gap:0} .hero .headshot,.hero h1,.hero .role{order:0} .hero .herofig{order:1; margin-top:20px} .hero .summary,.hero .hero-links,.hero .seeking{order:2} }
 /* warmer palette (light mode only; dark rules have higher specificity) */
 :root{--bg:#FCFBF9; --surface:#FFFFFF; --rule:#ECE9E4; --noncrop:#E7E4DF; --grey:#5F6168}
