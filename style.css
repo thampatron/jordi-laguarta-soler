@@ -381,6 +381,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .page > .wrap > .figwide .frame > svg.vz{max-width:480px}
 .figsplit .frame{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:24px 64px; align-items:center; padding:36px 40px}
 .figsplit .vz{max-width:400px; margin-left:-14px}
+@media (min-width:641px){ .figsplit .vz{max-width:none; width:calc(100% + 28px); margin:0 -14px} .figsplit .vz text{font-size:9.6px} }
 .figsplit, .figwide:not(.tf-hero):not(.eo-fig):has(> .frame > svg.vz){max-width:560px}
 .tf-hero{max-width:720px}
 .eo-fig{max-width:var(--prose)}
