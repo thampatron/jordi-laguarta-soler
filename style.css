@@ -13,7 +13,7 @@
   --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#3B7FD0; --pulse:#E62E2E; --trees:#238C35; color-scheme:dark }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth; scroll-padding-top:calc(var(--navh) + 8px); -webkit-text-size-adjust:100%}
 @media print{ :root:not(#_),:root[data-theme="dark"]{--bg:#fff; --surface:#fff; --ink:#111; --grey:#555; --rule:#ddd; --link:#111; color-scheme:light} .nav,.skip,#timeline,.tl-hint{display:none !important} .affil-list li img{filter:grayscale(1) brightness(0) !important; opacity:.62 !important} figure,.thumb,canvas,img{break-inside:avoid} h2,h3{break-after:avoid} }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{transition-duration:0s !important; transition-delay:0s !important; animation-duration:0s !important} }
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -92,7 +92,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 }
 
 /* home sections */
-.section{padding-block:72px 0}
+.section{padding-block:72px 0; scroll-margin-top:-48px}
 .section > .wrap > h2{font-size:24px; font-weight:600; letter-spacing:-0.015em; margin-bottom:24px}
 .section-head{display:flex; flex-wrap:wrap; row-gap:4px; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:24px}
 .section-head h2{font-size:24px; font-weight:600; letter-spacing:-0.015em}
@@ -127,7 +127,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .xp li{display:grid; grid-template-columns:120px minmax(0,1fr); gap:24px; padding-block:16px; border-bottom:1px solid var(--rule)}
 .xp .when{font-size:14px; color:var(--grey)}
 .xp b{font-weight:600}
-.xp .org{font-size:15.5px}
+.xp .org{display:block; font-size:15.5px; text-wrap:balance}
 .xp p{font-size:15px; color:var(--grey); margin-top:2px}
 @media (max-width:640px){ .xp li{grid-template-columns:1fr; gap:2px} }
 
@@ -279,10 +279,10 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .thumb img.t-img{width:100%; height:100%; object-fit:cover; display:block}
 /* Thailand hero: tall national map beside the per-class F1 chart */
 .thzone{display:grid; grid-template-columns:auto minmax(0,1fr); gap:40px; align-items:center}
-.thzone img{display:block; height:auto; width:auto; max-width:100%; max-height:560px; justify-self:center; aspect-ratio:788/1362}
+.thzone img{display:block; height:auto; width:324px; max-width:100%; max-height:560px; justify-self:center; aspect-ratio:788/1362}
 .figwide .figtitle{font-weight:600; font-size:15px}
 .figwide .figsub{font-size:14px; color:var(--grey); margin:4px 0 14px}
-@media (max-width:860px){ .thzone{grid-template-columns:1fr; gap:24px} .thzone img{max-height:460px} }
+@media (max-width:860px){ .thzone{grid-template-columns:1fr; gap:24px} .thzone img{width:266px; max-height:460px} }
 @media (max-width:640px){ .figwide .frame{padding:16px} }
 /* R12 design: map in hero, bigger type, visual rows */
 .hero{padding-block:48px 24px}
@@ -300,6 +300,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .herofig canvas{display:block; width:100%; height:auto; max-height:min(72svh,640px); object-fit:contain; margin-inline:auto}
 .herofig .legend{display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px; margin-top:12px; max-width:360px; margin-inline:auto}
 .herofig .legend button{font-size:12.5px; width:auto}
+@media (max-width:380px){ .herofig .legend{display:grid; grid-template-columns:repeat(3,auto); justify-content:center} }
 .herofig .cap{text-align:center; font-size:13px; color:var(--grey); margin-top:6px}
 .herofig .cap a{display:inline-block; padding-block:4px}
 .section > .wrap > h2, .section-head h2{font-size:28px; letter-spacing:-0.02em}
@@ -428,7 +429,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl{list-style:none; margin:0 0 40px; padding:20px 0 0; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); position:relative}
 .tl::before{content:""; position:absolute; left:0; right:0; top:46px; height:1px; background:var(--rule)}
 .tl-bar{position:relative; display:flex; justify-content:center}
-.tl-lab{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0; text-align:center; padding:0 6px; text-decoration:none; font:inherit; max-width:100%}
+.tl-lab{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0; text-align:center; padding:0 3px; text-decoration:none; font:inherit; max-width:100%}
 .tl-yr{font-size:12px; color:var(--grey); font-variant-numeric:tabular-nums; line-height:18px}
 .tl-dot{width:9px; height:9px; border-radius:50%; background:var(--bg); border:1.5px solid var(--ink); margin:4px 0 10px; position:relative; z-index:1; transition:background .15s}
 .tl-now .tl-dot{background:var(--ink)}
@@ -452,8 +453,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
 :root[data-theme="dark"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)}
-@media (max-width:900px){ #timeline,.tl-hint{display:none} }
-@media (min-width:901px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
+@media (max-width:979px){ #timeline,.tl-hint{display:none} }
+@media (min-width:980px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
 /* first-screen round (Nov 3): laptop fold, phone bio-first, headshot beside name */
 @media (min-width:861px) and (max-height:820px){ .hero{padding-block:24px 8px} .hero .headshot{width:80px;height:80px;margin-bottom:14px} .hero h1{font-size:44px} .summary{font-size:17.5px; line-height:1.55; margin-top:16px} .summary + .summary{margin-top:10px} .hero-links{margin-top:16px} .seeking{margin-top:8px} }
 .seeking{text-wrap:pretty; color:color-mix(in srgb, var(--ink) 72%, var(--bg))}
