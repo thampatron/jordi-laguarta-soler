@@ -153,7 +153,7 @@ footer a{color:var(--ink); display:inline-block; padding-block:5px}
 .back{font-size:14px; color:var(--grey); display:inline-block; padding-block:5px}
 .back:hover{color:var(--ink)}
 .prose-col{max-width:var(--prose)}
-.eyebrow{margin-top:28px; font-size:14px; color:var(--grey)}
+.eyebrow{margin-top:28px; font-size:14px; color:var(--grey)} .eyebrow > span{white-space:nowrap}
 .page h1{margin-top:8px; font-size:36px; font-weight:600; letter-spacing:-0.025em; line-height:1.2}
 @media (max-width:640px){ .page h1{font-size:clamp(24px, 7.2vw, 28px); line-height:1.15; letter-spacing:-0.02em} table.res{font-size:14px} table.res th, table.res td{padding-right:10px} }
 .lede{margin-top:16px; font-size:18px; line-height:1.6}
