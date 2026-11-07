@@ -219,6 +219,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 @media (max-width:860px){ table.mini{font-size:10.5px; width:88%} table.mini td{padding:1px 0} }
 .prose-col .figs3{grid-template-columns:1fr; gap:16px; max-width:560px}
 .prose-col .figs3 svg{max-width:420px}
+@media (min-width:641px){ .prose-col .figs3 svg text{font-size:10.4px} }
 .figs3 > .frame.figwide{display:block}
 .figs3 > .frame.figwide .figsub{margin-top:4px}
 /* round 8 */
@@ -278,7 +279,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .vz-thumb{width:100%; height:100%; display:block}
 .thumb img.t-img{width:100%; height:100%; object-fit:cover; display:block}
 /* Thailand hero: tall national map beside the per-class F1 chart */
-.thzone{display:grid; grid-template-columns:auto minmax(0,1fr); gap:40px; align-items:center}
+.thzone{display:grid; grid-template-columns:auto minmax(0,400px); justify-content:center; gap:40px 56px; align-items:center}
 .thzone img{display:block; height:auto; width:324px; max-width:100%; max-height:560px; justify-self:center; aspect-ratio:788/1362}
 .figwide .figtitle{font-weight:600; font-size:15px}
 .figwide .figsub{font-size:14px; color:var(--grey); margin:4px 0 14px}
