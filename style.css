@@ -192,6 +192,7 @@ svg .links{stroke:var(--link)}
 .steps li::before{content:counter(s); font-size:12px; color:var(--grey)}
 .steps b{font-weight:600; font-size:15px; line-height:1.3}
 .steps span{color:var(--grey)}
+@media (min-width:761px){ .steps{grid-template-rows:auto auto auto} .steps li{grid-row:span 3; grid-template-rows:subgrid} }
 @media (max-width:760px){ .steps{grid-template-columns:1fr; gap:0} .steps li{grid-template-columns:22px minmax(0,1fr); column-gap:10px; row-gap:1px; padding:10px 0; border-top:1px solid var(--rule)} .steps li:first-child{border-top:2px solid var(--ink)} .steps li::before{grid-row:span 2; padding-top:2px} }
 .zone{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; margin-top:14px}
 .zone canvas{width:100%; height:auto; aspect-ratio:1600/1385; display:block}
@@ -488,6 +489,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .page p.tags{margin-top:12px; font-size:13.5px; line-height:1.5; color:color-mix(in srgb, var(--ink) 72%, transparent); letter-spacing:0.005em}
 .page p.tags span[aria-hidden]{color:var(--grey)}
 .page p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
+.page p.tags{text-wrap:balance}
 .work p.tags{margin-top:10px; font-size:13.5px; line-height:1.5; color:color-mix(in srgb, var(--ink) 72%, transparent); max-width:none; letter-spacing:0.005em}
 .work p.tags span[aria-hidden]{color:var(--grey)}
 .work p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
