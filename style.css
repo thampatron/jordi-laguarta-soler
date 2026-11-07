@@ -441,8 +441,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-lab:focus-visible{outline:2px solid var(--link); outline-offset:4px; border-radius:6px}
 .tl-lab:hover,.tl-lab:hover b{text-decoration:none}
 .tl-sub{font-size:12px; line-height:1.35; color:var(--grey); margin-top:3px; text-wrap:balance}
-.tl-bar:hover .tl-dot,.tl-bar.open .tl-dot,.tl-bar:has(:focus-visible) .tl-dot{background:var(--ink)}
-.tl-bar:hover,.tl-bar.open,.tl-bar:has(:focus-visible){z-index:5}
+.tl-bar.open .tl-dot,.tl-bar:has(:focus-visible) .tl-dot{background:var(--ink)}
+.tl-bar.open,.tl-bar:has(:focus-visible){z-index:5}
 .tl-hint{font-size:13px; color:var(--grey)}
 .tl-pop{position:absolute; left:-4px; top:calc(100% + 8px); width:min(320px, 70vw); display:grid; gap:3px; padding:12px 14px; background:var(--surface); color:var(--ink); border:1px solid var(--rule); border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.14); font-size:13px; line-height:1.45; white-space:normal; opacity:0; visibility:hidden; transform:translateY(-4px); transition:opacity .15s, transform .15s, visibility 0s .15s; z-index:20; pointer-events:none}
 .tl-pop{left:50%; margin-left:-160px; width:320px}
@@ -453,7 +453,8 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-pop .tl-dates{color:var(--grey); font-size:12.5px; font-variant-numeric:tabular-nums}
 .tl-pop .tl-detail{color:color-mix(in srgb, var(--ink) 78%, var(--bg)); margin-top:4px}
 .tl-pop .tl-more{margin-top:6px; font-size:12.5px; font-weight:500; color:var(--link)}
-.tl-bar:hover .tl-pop,.tl-bar.open .tl-pop,.tl-bar:has(:focus-visible) .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s}
+.tl-bar.open .tl-pop,.tl-bar:has(:focus-visible) .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s}
+@media (hover:hover){ .tl-bar:hover .tl-dot{background:var(--ink)} .tl-bar:hover{z-index:6} .tl-bar:hover .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s} .tl:has(.tl-bar:hover) .tl-bar:not(:hover) .tl-pop{opacity:0; visibility:hidden} }
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
 :root[data-theme="dark"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)}
