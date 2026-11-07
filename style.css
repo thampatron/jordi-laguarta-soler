@@ -287,6 +287,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .figwide .figsub{font-size:14px; color:var(--grey); margin:4px 0 14px}
 @media (max-width:860px){ .thzone{grid-template-columns:1fr; gap:24px} .thzone img{width:266px; max-height:460px} }
 @media (max-width:640px){ .figwide .frame{padding:16px} }
+@media (max-width:374px){ .figwide:not(.figsplit) .frame{padding:16px 10px} }
 /* R12 design: map in hero, bigger type, visual rows */
 .hero{padding-block:48px 24px}
 .hero .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:56px; align-items:center; min-height:calc(100svh - var(--navh) - 72px)}
