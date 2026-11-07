@@ -175,7 +175,7 @@ table.res th{text-align:left; font-weight:600; font-size:13.5px; color:var(--gre
 table.res td{border-bottom:1px solid var(--rule); padding:10px 12px 10px 0; vertical-align:top}
 .tablewrap{overflow-x:auto}
 .callout{margin-top:14px; padding:16px 18px; border-radius:10px; background:var(--surface); border:1px solid var(--rule); font-size:15.5px}
-.cite{margin-top:14px; font-size:13px; background:var(--surface); border:1px solid var(--rule); border-radius:10px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; overflow-wrap:anywhere; font-family:ui-monospace, Menlo, Consolas, monospace}
+.cite{margin-top:14px; font-size:12.5px; background:var(--surface); border:1px solid var(--rule); border-radius:10px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; overflow-wrap:anywhere; font-family:ui-monospace, Menlo, Consolas, monospace}
 .pager{margin-top:72px; padding-top:24px; border-top:1px solid var(--rule); display:flex; justify-content:space-between; gap:16px; font-size:15px}
 .pager span{display:block; font-size:13px; color:var(--grey)}
 .figwide{margin:28px 0 0; display:grid; gap:10px}
@@ -394,6 +394,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 @media (min-width:641px){ .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} }
 .eo-fig{max-width:var(--prose)}
 @media (min-width:641px){ .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
+@media (min-width:521px) and (max-width:640px){ .prose-col .figs3 svg text{font-size:10.4px} .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
 .figsplit .frame{grid-template-columns:minmax(0,1fr); gap:20px; padding:28px 32px}
 .fs-side{display:flex; align-items:center; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--rule)}
 .fs-wave{display:block; width:150px; flex:none; height:auto; margin:0}
