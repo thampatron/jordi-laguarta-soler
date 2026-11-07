@@ -211,6 +211,7 @@ svg .links{stroke:var(--link)}
 .figs3 b.big{font-size:30px; font-weight:600; letter-spacing:-0.02em}
 @media (max-width:860px){ .figs3{grid-template-columns:1fr} }
 .figs3 svg{width:100%; height:auto; overflow:visible}
+.frame > svg{vertical-align:top}
 .work div.row{display:grid; grid-template-columns:240px minmax(0,1fr) 150px; gap:32px; padding-block:24px; align-items:center}
 @media (max-width:860px){ .work div.row{grid-template-columns:120px minmax(0,1fr); gap:18px} }
 table.mini{border-collapse:collapse; font-size:13.5px; font-variant-numeric:tabular-nums; width:78%}
@@ -387,6 +388,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 @media (min-width:641px){ .figsplit .vz{max-width:none; width:calc(100% + 28px); margin:0 -14px} .figsplit .vz text{font-size:9.6px} }
 .figsplit, .figwide:not(.tf-hero):not(.eo-fig):has(> .frame > svg.vz){max-width:560px}
 .tf-hero{max-width:720px}
+@media (min-width:641px){ .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} }
 .eo-fig{max-width:var(--prose)}
 @media (min-width:641px){ .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
 .figsplit .frame{grid-template-columns:minmax(0,1fr); gap:20px; padding:28px 32px}
