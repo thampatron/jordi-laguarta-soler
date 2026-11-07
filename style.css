@@ -430,7 +430,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl{list-style:none; margin:0 0 40px; padding:20px 0 0; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); position:relative}
 .tl::before{content:""; position:absolute; left:0; right:0; top:46px; height:1px; background:var(--rule)}
 .tl-bar{position:relative; display:flex; justify-content:center}
-.tl-lab{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0; text-align:center; padding:0 3px; text-decoration:none; font:inherit; max-width:100%}
+.tl-lab{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0; text-align:center; padding:0 2px; text-decoration:none; font:inherit; max-width:100%}
 .tl-yr{font-size:12px; color:var(--grey); font-variant-numeric:tabular-nums; line-height:18px}
 .tl-dot{width:9px; height:9px; border-radius:50%; background:var(--bg); border:1.5px solid var(--ink); margin:4px 0 10px; position:relative; z-index:1; transition:background .15s}
 .tl-now .tl-dot{background:var(--ink)}
