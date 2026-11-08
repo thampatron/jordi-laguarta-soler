@@ -43,7 +43,7 @@
   if(!maps.length&&!th.length) return;
   var src=maps.length?maps[0].cv.getAttribute('data-src'):'assets/india-map.png';
   function thumbs(){ if(!th.length) return; var c=document.createElement('canvas'); c.width=W; c.height=H; new M(c).draw(-1);
-    Array.prototype.forEach.call(th,function(e){ var t=e.querySelector('canvas'); if(!t){ t=document.createElement('canvas'); t.width=667; t.height=417; e.appendChild(t); e.style.backgroundImage='none'; } t.getContext('2d').clearRect(0,0,667,417); t.getContext('2d').drawImage(c,429,329,667,417,0,0,667,417); }); }
+    Array.prototype.forEach.call(th,function(e){ var t=e.querySelector('canvas'); if(!t){ t=document.createElement('canvas'); t.width=667; t.height=417; e.appendChild(t); e.style.backgroundImage='none'; } t.getContext('2d').clearRect(0,0,667,417); t.getContext('2d').drawImage(c,360,280,667,417,0,0,667,417); }); }
   var img=new Image();
   img.onload=function(){
     var t=document.createElement('canvas'); t.width=W; t.height=H; var x=t.getContext('2d'); x.drawImage(img,0,0,W,H);

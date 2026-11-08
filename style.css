@@ -223,7 +223,7 @@ table.mini td:last-child{text-align:right; font-weight:600}
 @media (max-width:860px){ table.mini{font-size:10.5px; width:88%} table.mini td{padding:1px 0} }
 .prose-col .figs3{grid-template-columns:1fr; gap:16px; max-width:560px}
 .prose-col .figs3 svg{max-width:420px}
-@media (min-width:641px){ .prose-col .figs3 svg text{font-size:10.4px} }
+@media (min-width:641px){ .prose-col .figs3 svg{max-width:none} .prose-col .figs3 svg text{font-size:8.4px} }
 .figs3 > .frame.figwide{display:block}
 .figs3 > .frame.figwide .figsub{margin-top:4px}
 /* round 8 */
@@ -391,7 +391,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 @media (min-width:641px){ .figsplit .vz{max-width:none; width:calc(100% + 28px); margin:0 -14px} .figsplit .vz text{font-size:9.6px} }
 .figsplit, .figwide:not(.tf-hero):not(.eo-fig):has(> .frame > svg.vz){max-width:560px}
 .tf-hero{max-width:720px}
-@media (min-width:641px){ .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} }
+@media (min-width:641px){ .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} .figwide.fig-fill .frame svg.vz{max-width:none} .figwide.fig-fill .frame svg.vz text{font-size:9px} }
 .eo-fig{max-width:var(--prose)}
 @media (min-width:641px){ .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
 @media (min-width:521px) and (max-width:640px){ .prose-col .figs3 svg text{font-size:10.4px} .figwide:not(.figsplit):not(.tf-hero) svg.vz text{font-size:11.5px} .tf-hero svg.vz text{font-size:9.6px} .tf-hero svg.vz .vz-q{font-size:11px} }
