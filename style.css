@@ -129,7 +129,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .xp b{font-weight:600}
 .xp .org{display:block; font-size:15.5px; text-wrap:balance}
 .xp p{font-size:15px; color:var(--grey); margin-top:2px}
-@media (max-width:640px){ .xp li{grid-template-columns:1fr; gap:2px} }
+@media (max-width:640px){ .xp li{grid-template-columns:1fr; gap:2px} .xp-edu .edu-i{display:block} .xp-edu .xp-sep{display:none} }
 
 .pubs{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule)}
 .pubs li{padding-block:16px; border-bottom:1px solid var(--rule); display:grid; gap:3px}
