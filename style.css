@@ -1,9 +1,10 @@
+@font-face{font-family:"Inter Fallback"; src:local("Arial"), local("Liberation Sans"); size-adjust:107.12%; ascent-override:90.44%; descent-override:22.52%; line-gap-override:0%; unicode-range:U+0000-00FF, U+2013-2014, U+2018-2022, U+2026}
 /* Professional system: Inter only; neutral tokens; colour appears only inside figures. 1120px grid, 720px prose. */
 :root{
   --bg:#FAFAFA; --surface:#FFFFFF; --ink:#111111; --grey:#666666; --rule:#E5E5E5; --link:#2450B2;
   --noncrop:#E6E6E6; --border:#111111;
   --rice:#C7F464; --soy:#FF6B6B; --pulse:#9E1B1B; --maize:#4ECDC4; --millet:#D4A017; --sugar:#C44DFF; --cotton:#556270; --trees:#358221; --water:#1A5BAB;
-  --f:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f:"Inter", "Inter Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --max:1120px; --prose:720px; --navh:60px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
