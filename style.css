@@ -365,7 +365,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* r16 design */
 /* Thailand: country silhouette in the non-crop token under the crop layer */
 .t-th,.th-map{position:relative; display:block}
-.t-th{width:100%; height:100%; transform:scale(1.5); transform-origin:30% 72%}
+.t-th{width:100%; height:100%; transform:scale(1.5); transform-origin:30% 90%}
 .t-th::before,.th-map::before{content:""; position:absolute; inset:0; background:var(--noncrop); -webkit-mask:url(assets/thailand-thumb-mask.png) center/100% 100% no-repeat; mask:url(assets/thailand-thumb-mask.png) center/100% 100% no-repeat}
 .th-map::before{-webkit-mask-image:url(assets/thailand-mask.png); mask-image:url(assets/thailand-mask.png)}
 .t-th img.t-img{position:relative; transform:none; filter:none}
