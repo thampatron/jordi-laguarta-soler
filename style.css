@@ -108,9 +108,9 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .thumb .t-num b{font-size:34px; font-weight:600; letter-spacing:-0.02em}
 .thumb .t-num span{font-size:13px; color:var(--grey)}
 .thumb svg{width:86%; height:auto}
-.work .meta{font-size:13.5px; color:var(--grey)}
+.work .meta{font-size:13.5px; color:var(--grey); display:flex; flex-wrap:wrap; column-gap:0.9em; overflow:hidden; line-height:25.6px} .work .meta > span:not(.sr-only){white-space:nowrap; position:relative} .work .meta > span:not(.sr-only)::before{content:"·" / ""; position:absolute; left:-0.6em}
 .work h3{font-size:18px; font-weight:600; letter-spacing:-0.01em; margin-top:4px}
-.work p{margin-top:6px; font-size:15.5px; color:var(--grey); max-width:60ch}
+.work p{margin-top:6px; font-size:15.5px; color:var(--grey); max-width:60ch} .work p:not(.tags){text-wrap:pretty}
 .work .k{text-align:right; display:grid; gap:2px}
 .work .k b{font-size:22px; font-weight:600; letter-spacing:-0.015em}
 .work .k span{font-size:13px; color:var(--grey)}
@@ -500,3 +500,4 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .work p.tags{margin-top:10px; font-size:13.5px; line-height:1.5; color:color-mix(in srgb, var(--ink) 72%, transparent); max-width:none; letter-spacing:0.005em}
 .work p.tags span[aria-hidden]{color:var(--grey)}
 .work p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
+p.tags{display:flex; flex-wrap:wrap; column-gap:0.9em; overflow:hidden} p.tags > span[aria-hidden]{display:none} p.tags > span:not([aria-hidden]):not(.sr-only){position:relative} p.tags > span:not([aria-hidden]):not(.sr-only)::before{content:"·" / ""; position:absolute; left:-0.6em; color:var(--grey)}
