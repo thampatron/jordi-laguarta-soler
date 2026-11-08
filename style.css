@@ -497,6 +497,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .page p.tags span[aria-hidden]{color:var(--grey)}
 .page p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
 .page p.tags{text-wrap:balance}
+@media (min-width:761px){ .page p.tags{display:block} .page p.tags > span:not([aria-hidden]):not(.sr-only){display:inline-block} .page p.tags > span:not([aria-hidden]):not(.sr-only):not(:last-child){margin-right:.9em} }
 .work p.tags{margin-top:10px; font-size:13.5px; line-height:1.5; color:color-mix(in srgb, var(--ink) 72%, transparent); max-width:none; letter-spacing:0.005em}
 .work p.tags span[aria-hidden]{color:var(--grey)}
 .work p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
