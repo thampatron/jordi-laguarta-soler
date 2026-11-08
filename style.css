@@ -462,7 +462,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
 :root[data-theme="dark"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)}
-@media (max-width:979px){ #timeline,.tl-hint{display:none} }
+@media (max-width:979px){ #timeline,.tl-hint{display:none} } @media (hover:none){ .tl-hint{display:none} }
 @media (min-width:980px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
 /* first-screen round (Nov 3): laptop fold, phone bio-first, headshot beside name */
 @media (min-width:861px) and (max-height:820px){ .hero{padding-block:24px 8px} .hero .headshot{width:80px;height:80px;margin-bottom:14px} .hero h1{font-size:44px} .summary{font-size:17.5px; line-height:1.55; margin-top:16px} .summary + .summary{margin-top:10px} .hero-links{margin-top:16px} .seeking{margin-top:8px} }
