@@ -42,6 +42,11 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .links{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; font-size:14.5px}
 .links a{color:var(--grey)}
 .links a:hover, .links a[aria-current]{color:var(--ink); text-decoration:none}
+.nav-r{display:flex; align-items:center; gap:20px}
+.theme-btn{display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; padding:0; color:var(--grey); background:none; border:1px solid var(--rule); border-radius:8px; cursor:pointer}
+.theme-btn:hover{color:var(--ink)} .theme-btn svg{width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+.theme-btn .i-sun{display:none} :root[data-theme="dark"] .theme-btn .i-sun{display:block} :root[data-theme="dark"] .theme-btn .i-moon{display:none}
+@media (max-width:700px){ .nav-r{gap:10px} }
 .menu-btn{display:none; font:inherit; font-size:14.5px; color:var(--ink); background:none; border:1px solid var(--rule); border-radius:8px; padding:6px 12px; cursor:pointer}
 @media (max-width:700px){
   .menu-btn{display:inline-block}
