@@ -367,7 +367,6 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .st-col ul{list-style:none; margin:0; padding:0; display:grid; gap:4px; font-size:15px; line-height:1.4; text-wrap:balance}
 @media (max-width:760px){ .st-strip{grid-template-columns:1fr 1fr} .st-col:nth-child(3){border-left:0} .st-col:nth-child(n+3){border-top:1px solid var(--rule)} .st-col::after{display:none} .st-col{padding:16px 14px} .st-col ul{font-size:14px} }
 .summary a{color:inherit; text-decoration:underline; text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent); text-underline-offset:3px}
-.xp p a{color:var(--ink); text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent)} .xp p a:hover{text-decoration-color:currentColor}
 
 /* r16 design */
 /* Thailand: country silhouette in the non-crop token under the crop layer */
@@ -528,3 +527,9 @@ p.tags{display:flex; flex-wrap:wrap; column-gap:0.9em; overflow:hidden} p.tags >
   .pubs li.pt-row{grid-template-columns:80px minmax(0,1fr); column-gap:14px}
   .pubs li.pt-row > .thumb{width:80px; height:54px}
 }
+.thumb.thumb-img{background:#fff}
+.thumb.thumb-img img{width:100%; height:100%; object-fit:cover; display:block}
+.publine li.pt-row{grid-template-columns:96px minmax(0,1fr) auto}
+.publine li.pt-row > .thumb{width:96px; height:64px}
+.news-credit{margin-top:10px; font-size:12.5px; color:var(--grey)}
+@media (max-width:640px){ .publine li.pt-row{grid-template-columns:72px minmax(0,1fr)} .publine li.pt-row > .thumb{width:72px; height:48px} }
