@@ -43,13 +43,13 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .links a{color:var(--grey)}
 .links a:hover, .links a[aria-current]{color:var(--ink); text-decoration:none}
 .nav-r{display:flex; align-items:center; gap:20px}
-.theme-btn{display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; padding:0; color:var(--grey); background:none; border:1px solid var(--rule); border-radius:8px; cursor:pointer}
+.theme-btn{display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; padding:0; color:var(--grey); background:none; border:1px solid var(--rule); border-radius:8px; cursor:pointer}
 .theme-btn:hover{color:var(--ink)} .theme-btn svg{width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
 .theme-btn .i-sun{display:none} :root[data-theme="dark"] .theme-btn .i-sun{display:block} :root[data-theme="dark"] .theme-btn .i-moon{display:none}
 @media (max-width:700px){ .nav-r{gap:10px} }
-.menu-btn{display:none; font:inherit; font-size:14.5px; color:var(--ink); background:none; border:1px solid var(--rule); border-radius:8px; padding:6px 12px; cursor:pointer}
+.menu-btn{display:none; font:inherit; font-size:14.5px; color:var(--ink); background:none; border:1px solid var(--rule); border-radius:8px; height:36px; padding:0 12px; line-height:1; cursor:pointer}
 @media (max-width:700px){
-  .menu-btn{display:inline-block}
+  .menu-btn{display:inline-flex; align-items:center}
   .links{display:none; position:absolute; top:var(--navh); left:0; right:0; flex-direction:column; align-items:flex-start; gap:0; background:var(--bg); border-bottom:1px solid var(--rule); padding:8px max(20px, env(safe-area-inset-left,0px)) 16px}
   .links li{width:100%}
   .links a{display:block; padding:12px 0; font-size:16px; color:var(--ink)}

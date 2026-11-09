@@ -79,7 +79,7 @@
 /* light/dark toggle: light by default; choice remembered per browser */
 (function(){ var b=document.querySelector('.theme-btn'); if(!b) return; var r=document.documentElement;
   try{ if(localStorage.getItem('theme')==='dark') r.setAttribute('data-theme','dark'); }catch(e){}
-  function sync(){ var d=r.getAttribute('data-theme')==='dark'; b.setAttribute('aria-pressed',String(d)); b.title=d?'Switch to light mode':'Switch to dark mode'; }
+  function sync(){ var d=r.getAttribute('data-theme')==='dark'; b.setAttribute('aria-pressed',String(d)); b.title=d?'Switch to light mode':'Switch to dark mode'; var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute('content',d?'#0E1013':'#FCFBF9'); }
   sync();
   b.addEventListener('click',function(){ var d=r.getAttribute('data-theme')!=='dark'; if(d) r.setAttribute('data-theme','dark'); else r.removeAttribute('data-theme'); try{ localStorage.setItem('theme',d?'dark':'light'); }catch(e){} sync(); });
 })();
