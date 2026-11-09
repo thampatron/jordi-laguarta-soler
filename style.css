@@ -367,6 +367,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .st-col ul{list-style:none; margin:0; padding:0; display:grid; gap:4px; font-size:15px; line-height:1.4; text-wrap:balance}
 @media (max-width:760px){ .st-strip{grid-template-columns:1fr 1fr} .st-col:nth-child(3){border-left:0} .st-col:nth-child(n+3){border-top:1px solid var(--rule)} .st-col::after{display:none} .st-col{padding:16px 14px} .st-col ul{font-size:14px} }
 .summary a{color:inherit; text-decoration:underline; text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent); text-underline-offset:3px}
+.xp p a{color:var(--ink); text-decoration-color:color-mix(in srgb, var(--ink) 35%, transparent)} .xp p a:hover{text-decoration-color:currentColor}
 
 /* r16 design */
 /* Thailand: country silhouette in the non-crop token under the crop layer */
@@ -513,17 +514,3 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .work p.tags span[aria-hidden]{color:var(--grey)}
 .work p.tags > span:not([aria-hidden]):not(.sr-only){white-space:nowrap}
 p.tags{display:flex; flex-wrap:wrap; column-gap:0.9em; overflow:hidden} p.tags > span[aria-hidden]{display:none} p.tags > span:not([aria-hidden]):not(.sr-only){position:relative} p.tags > span:not([aria-hidden]):not(.sr-only)::before{content:"·" / ""; position:absolute; left:-0.6em; color:var(--grey)}
-/* small thumbnails on publication and news rows */
-.publine li.pt-row{display:grid; grid-template-columns:72px minmax(0,1fr) auto; column-gap:16px; align-items:center}
-.pt-row > .thumb{width:72px; height:48px; border-radius:6px; aspect-ratio:auto}
-.pt-row > .thumb svg{width:90%; height:auto}
-.pubs li.pt-row{grid-template-columns:120px minmax(0,1fr); column-gap:20px}
-.pubs li.pt-row > .thumb{grid-column:1; grid-row:1 / span 4; width:120px; height:80px; border-radius:8px; align-self:start; margin-top:2px}
-.pubs li.pt-row > :not(.thumb){grid-column:2}
-@media (max-width:640px){
-  .publine li.pt-row{grid-template-columns:64px minmax(0,1fr); row-gap:2px}
-  .publine li.pt-row > .thumb{grid-row:1 / span 2; width:64px; height:44px}
-  .publine li.pt-row > :not(.thumb){grid-column:2}
-  .pubs li.pt-row{grid-template-columns:80px minmax(0,1fr); column-gap:14px}
-  .pubs li.pt-row > .thumb{width:80px; height:54px}
-}
