@@ -534,3 +534,17 @@ p.tags{display:flex; flex-wrap:wrap; column-gap:0.9em; overflow:hidden} p.tags >
 .publine li.pt-row > .thumb{width:96px; height:64px}
 .news-credit{margin-top:10px; font-size:12.5px; color:var(--grey)}
 @media (max-width:640px){ .publine li.pt-row{grid-template-columns:72px minmax(0,1fr)} .publine li.pt-row > .thumb{width:72px; height:48px} }
+/* owner (Nov 9): bigger headshot */
+@media (min-width:761px){ .hero .headshot{width:116px; height:116px} .hero-text{column-gap:22px} }
+@media (min-width:861px) and (max-height:820px){ .hero .headshot{width:100px; height:100px} }
+@media (min-width:861px) and (max-width:1100px){ .hero .headshot{width:96px; height:96px} }
+@media (max-width:760px){ .hero .wrap{grid-template-columns:96px minmax(0,1fr)} .hero .headshot{width:96px; height:96px} }
+@media (max-width:359px){ .hero .wrap{grid-template-columns:80px minmax(0,1fr)} .hero .headshot{width:80px; height:80px} }
+@media (min-width:861px) and (min-height:821px){ .hero{padding-top:24px} .hero-text > .role + .summary{margin-top:14px} }
+@media (min-width:861px) and (max-height:820px){ .hero .headshot{width:92px; height:92px} .hero-text > .role + .summary{margin-top:10px} }
+@media (min-width:861px) and (max-height:680px){ .hero .headshot{width:88px; height:88px} .hero{padding-top:8px} }
+/* owner (Nov 9): affiliation logos in their official colours (light theme); dark theme keeps the one-colour white treatment for contrast */
+.affil-list li img{filter:none; opacity:1}
+:root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.8}
+/* owner (Nov 9): no duplicate name in the nav on the home page (the hero shows it right below) */
+.nav .brand[aria-current="page"]{visibility:hidden}
