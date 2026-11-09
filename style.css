@@ -7,7 +7,7 @@
   --f:"Inter", "Inter Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --max:1120px; --prose:720px; --navh:60px;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"]{
   --bg:#0E1013; --surface:#171A1F; --ink:#F2F4F7; --grey:#949BA5; --rule:#262A31; --link:#8AB4FF;
   --noncrop:#2A3039; --border:#F2F4F7; --cotton:#8A96A3; --water:#3B7FD0; --pulse:#E62E2E; --trees:#238C35; color-scheme:dark }}
 :root[data-theme="dark"]{ --bg:#0E1013; --surface:#171A1F; --ink:#F2F4F7; --grey:#949BA5; --rule:#262A31; --link:#8AB4FF;
@@ -259,10 +259,10 @@ table.mini td:last-child{text-align:right; font-weight:600}
 .section{padding-block:56px 0}
 /* ---- r11 VIZ additions (append to style.css) ---- */
 :root{ --cassava:#E8772E; --th-other:#6B7078 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --band-op:.6 } }
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"]{ --band-op:.6 } }
 :root[data-theme="dark"]{ --band-op:.6 }
 :root{ --sw-edge:rgba(17,17,17,.4) }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --sw-edge:transparent } }
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"]{ --sw-edge:transparent } }
 :root[data-theme="dark"]{ --sw-edge:transparent }
 .vz{display:block; width:100%; max-width:400px; height:auto; overflow:visible}
 .vz text{font-size:13px}
@@ -409,7 +409,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 /* warmer palette (light mode only; dark rules have higher specificity) */
 :root{--bg:#FCFBF9; --surface:#FFFFFF; --rule:#ECE9E4; --noncrop:#E7E4DF; --grey:#5F6168}
 .hero{background:none}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.05), transparent 60%)} }
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"] .hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.05), transparent 60%)} }
 :root[data-theme="dark"] .hero{background:radial-gradient(1200px 520px at 78% 30%, rgba(199,244,100,.05), transparent 60%)}
 .eo-schem{display:flex!important; flex-wrap:wrap; justify-content:center; gap:24px 64px}
 .eo-schem svg{flex:1 1 260px; max-width:320px; height:auto}
@@ -430,7 +430,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 @media (min-width:1000px){ .affil-list{justify-content:space-between; gap:14px 24px} .affil-list li.affil-k{margin-right:0} }
 .affil-list .lg-mit img{height:44px} .affil-list .lg-ms img{height:26px} .affil-list .lg-ic img{height:32px} .affil-list .lg-ct img{height:32px} .affil-list .lg-ey img{height:30px}
 :root[data-theme="dark"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"] .affil-list li img{filter:grayscale(1) brightness(0) invert(1); opacity:.7} }
 @media (max-width:760px){ .affil-list{gap:14px 28px} .affil-list li img{height:22px} .affil-list .lg-mit img{height:40px} .affil-list .lg-ms img{height:21px} .affil-list .lg-ic img,.affil-list .lg-ct img{height:25px} .affil-list .lg-ey img{height:24px} .affil-list li.affil-k{flex-basis:100%} }
 /* mobile/dark round (Nov 4): clean role break, no hanging separator */
 .role-sep{white-space:pre} .role-b{white-space:nowrap}
@@ -464,7 +464,7 @@ a.st-row:hover .st-name b{text-decoration:underline; text-underline-offset:3px}
 .tl-bar.open .tl-pop,.tl-bar:has(:focus-visible) .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s}
 @media (hover:hover){ .tl-bar:hover .tl-dot{background:var(--ink)} .tl-bar:hover{z-index:6} .tl-bar:hover .tl-pop{opacity:1; visibility:visible; transform:none; transition:opacity .15s, transform .15s} .tl:has(.tl-bar:hover) .tl-bar:not(:hover) .tl-pop{opacity:0; visibility:hidden} }
 .tl-bar.esc:not(.open) .tl-pop{opacity:0; visibility:hidden}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
+@media (prefers-color-scheme: dark){ :root[data-theme="auto"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)} }
 :root[data-theme="dark"] .tl-pop{border-color:color-mix(in srgb, var(--grey) 35%, var(--rule)); box-shadow:0 12px 32px rgba(0,0,0,.6)}
 @media (max-width:979px){ #timeline,.tl-hint{display:none} } @media (hover:none){ .tl-hint{display:none} }
 @media (min-width:980px){ .xp .xp-edu{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
