@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://thampatron.github.io/jordi-laguarta-soler/sitemap.xml
+Sitemap: https://jordi-laguarta-soler.com/sitemap.xml
